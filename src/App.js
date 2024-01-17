@@ -78,7 +78,7 @@ function App() {
             showResult ? "form-container-hidden" : ""
           }`}
         >
-          <h2>Insert your location</h2>
+          <h2>Select your location</h2>
           <form onSubmit={handleSubmit}>
             <div className="form-control">
               <label htmlFor="country">Country</label>

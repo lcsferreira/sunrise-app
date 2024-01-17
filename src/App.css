@@ -28,7 +28,6 @@ form {
   margin: 0 auto;
   width: 100%;
   max-width: 600px;
-  padding: 0 1rem;
 }
 
 form .form-control {
@@ -133,6 +132,10 @@ form .btn-submit:disabled {
 .container h1 {
   text-align: center;
   padding: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .no-city {
