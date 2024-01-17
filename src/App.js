@@ -16,13 +16,6 @@ function App() {
   const [cities, setCities] = useState([]);
 
   const countries = Country.getAllCountries();
-  // const countries = [];
-
-  // useEffect(() => {
-  //   if (stateSelected) {
-  //     setCities(City.getCitiesOfState(stateSelected));
-  //   }
-  // }, [stateSelected]);
 
   const handleCountryChange = (event) => {
     setCountrySelected(event.target.value);
@@ -32,22 +25,37 @@ function App() {
 
   const handleStateChange = (event) => {
     setStateSelected(event.target.value);
-    console.log("State: ", event.target.value);
-    console.log("Country: ", countrySelected);
+    // console.log("State: ", event.target.value);
+    // console.log("Country: ", countrySelected);
     setCities(City.getCitiesOfState(countrySelected, event.target.value));
   };
 
   const handleCityChange = (event) => {
-    console.log("City: ", event.target.value);
+    // console.log("City: ", event.target.value);
     const [latitude, longitude] = event.target.value.split(",");
     setCitySelected({ lat: latitude, lng: longitude });
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("City: ", citySelected);
+    if (!citySelected) {
+      console.log("No city selected");
+      return;
+    }
     getSunriseSunset(citySelected);
     setShowResult(true);
+    //clear form
+    clearForm();
+  };
+
+  const clearForm = () => {
+    setCountrySelected("");
+    setStateSelected("");
+    setCitySelected(null);
+    setStates([]);
+    setCities([]);
+    //select the first option
+    document.getElementById("country").selectedIndex = 0;
   };
 
   const getSunriseSunset = (city) => {
@@ -75,6 +83,7 @@ function App() {
             <div className="form-control">
               <label htmlFor="country">Country</label>
               <select id="country" onChange={handleCountryChange}>
+                <option value="">Select a country</option>
                 {countries?.map((country) => (
                   <option key={country.isoCode} value={country.isoCode}>
                     {country.name}
@@ -86,6 +95,7 @@ function App() {
               <div className="form-control">
                 <label htmlFor="state">State</label>
                 <select id="state" onChange={handleStateChange}>
+                  <option value="">Select a state</option>
                   {states?.map((state) => (
                     <option key={state.isoCode} value={state.isoCode}>
                       {state.name}
@@ -98,6 +108,7 @@ function App() {
               <div className="form-control">
                 <label htmlFor="city">City</label>
                 <select id="city" onChange={handleCityChange}>
+                  <option value="">Select a city</option>
                   {cities?.map((city) => (
                     <option
                       key={city.name}
@@ -109,7 +120,11 @@ function App() {
                 </select>
               </div>
             )}
-            <button type="submit" className="btn-submit">
+            <button
+              type="submit"
+              className="btn-submit"
+              disabled={!citySelected}
+            >
               Submit
             </button>
           </form>
