@@ -7,7 +7,11 @@ import Day from "../assets/day.svg";
 import Sunrise from "../assets/sunrise.svg";
 import Sunset from "../assets/sunset.svg";
 
-const ResultCard = ({ results }) => {
+import DayBg from "../assets/day-bg.jpg";
+import SunriseBg from "../assets/sunrise-bg.jpg";
+import SunsetBg from "../assets/sunset-bg.jpg";
+
+const ResultCard = ({ results, location }) => {
   //create an array with the sunrise time, sunset time, solar noon time, day length, golden hour, dusk, dawn and last light
   const times = [
     {
@@ -49,13 +53,27 @@ const ResultCard = ({ results }) => {
   };
 
   const formattedTime = (time) => {
-    let hour = time?.split(":")[0];
-    //make the hour double digit
-    if (hour?.length === 1) {
-      hour = "0" + hour;
+    //only remove the seconds from the time
+    const hour = time.split(":")[0];
+    const minutes = time.split(":")[1];
+    const pmOrAm = hour >= 12 ? "PM" : "AM";
+
+    if (hour.length === 1) {
+      return `0${hour}:${minutes} ${pmOrAm}`;
     }
-    const minutes = time?.split(":")[1];
-    return `${hour}:${minutes}`;
+
+    return `${hour}:${minutes} ${pmOrAm}`;
+  };
+
+  const onClickChangeBgImage = (index) => {
+    const body = document.querySelector("body");
+    if (index === 0) {
+      body.style.backgroundImage = `url(${SunriseBg})`;
+    } else if (index === 2) {
+      body.style.backgroundImage = `url(${SunsetBg})`;
+    } else {
+      body.style.backgroundImage = `url(${DayBg})`;
+    }
   };
 
   return (
@@ -72,6 +90,7 @@ const ResultCard = ({ results }) => {
         showThumbs={false}
         axis="horizontal"
         centerSlidePercentage={100}
+        onChange={onClickChangeBgImage}
       >
         {times.map((time) => (
           <div key={time.id} className="carousel-div">

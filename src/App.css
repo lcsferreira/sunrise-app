@@ -13,12 +13,13 @@ body {
   line-height: 1.5;
   color: #fff;
   background-color: #fff;
-  background-image: url("./assets/day.jpg");
+  background-image: url("./assets/day-bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   backdrop-filter: blur(5.3px);
+  transition: all 0.4s ease-in-out;
 }
 
 form {
@@ -51,7 +52,7 @@ form .form-control select {
   font-size: 1rem;
   border-radius: 0.25rem;
   background-color: #fff;
-  color: #333;
+  color: #4d4d4d;
   cursor: pointer;
 }
 
@@ -61,7 +62,7 @@ form .form-control select option {
   border: none;
   border-radius: 0.25rem;
   background-color: #fff;
-  color: #333;
+  color: #4d4d4d;
   cursor: pointer;
 }
 
@@ -72,7 +73,7 @@ form .form-control input {
   border: none;
   border-radius: 0.25rem;
   background-color: #fff;
-  color: #333;
+  color: #4d4d4d;
 }
 
 form .form-control input:focus {
@@ -85,7 +86,7 @@ form .btn-submit {
   font-size: 1rem;
   border: none;
   border-radius: 0.25rem;
-  background-color: #333;
+  background-color: #4d4d4d;
   color: #fff;
   cursor: pointer;
 }
@@ -124,7 +125,7 @@ form .btn-submit:disabled {
   justify-content: center;
   gap: 1.75rem;
   background-color: #fff;
-  color: #333;
+  color: #4d4d4d;
   border-radius: 1rem;
   padding: 2rem;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -135,7 +136,7 @@ form .btn-submit:disabled {
   padding: 2rem;
   font-size: 2rem;
   font-weight: 700;
-  color: #333;
+  color: #4d4d4d;
   text-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
