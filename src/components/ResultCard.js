@@ -11,7 +11,7 @@ import DayBg from "../assets/day-bg.jpg";
 import SunriseBg from "../assets/sunrise-bg.jpg";
 import SunsetBg from "../assets/sunset-bg.jpg";
 
-const ResultCard = ({ results, location }) => {
+const ResultCard = ({ results }) => {
   //create an array with the sunrise time, sunset time, solar noon time, day length, golden hour, dusk, dawn and last light
   const times = [
     {
@@ -48,17 +48,19 @@ const ResultCard = ({ results, location }) => {
   ];
 
   const formattedDate = (date) => {
-    const d = new Date(date);
-    return d.toLocaleDateString();
+    //sum 1 day to the date because the API returns the date of the day before
+    const tomorrow = new Date(date);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    const tomorrowDate = tomorrow.toLocaleDateString();
+    return tomorrowDate;
   };
 
   const formattedTime = (time) => {
-    //only remove the seconds from the time
-    const hour = time.split(":")[0];
-    const minutes = time.split(":")[1];
+    const hour = time?.split(":")[0];
+    const minutes = time?.split(":")[1];
     const pmOrAm = hour >= 12 ? "PM" : "AM";
 
-    if (hour.length === 1) {
+    if (hour?.length === 1) {
       return `0${hour}:${minutes} ${pmOrAm}`;
     }
 
@@ -92,7 +94,7 @@ const ResultCard = ({ results, location }) => {
         centerSlidePercentage={100}
         onChange={onClickChangeBgImage}
       >
-        {times.map((time) => (
+        {times?.map((time) => (
           <div key={time.id} className="carousel-div">
             <h3>{time.name}</h3>
             <img key={time.id} src={time.icon} alt={time.name} />

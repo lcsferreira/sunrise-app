@@ -5,8 +5,11 @@ import ResultCard from "./components/ResultCard";
 import { Country, State, City } from "country-state-city";
 
 function App() {
+  const dateToday = new Date().toISOString().split("T")[0];
   const [results, setResults] = useState(null);
   const [showResult, setShowResult] = useState(false);
+
+  const [date, setDate] = useState(dateToday);
 
   const [countrySelected, setCountrySelected] = useState("");
   const [stateSelected, setStateSelected] = useState("");
@@ -54,19 +57,32 @@ function App() {
     setCitySelected(null);
     setStates([]);
     setCities([]);
+    setDate(null);
     //select the first option
     document.getElementById("country").selectedIndex = 0;
   };
 
   const getSunriseSunset = (city) => {
+    console.log("City: ", city);
+    console.log("Date: ", date);
+
     axios
       .get(
-        "https://api.sunrisesunset.io/json?lat=" + city.lat + "&lng=" + city.lng
+        "https://api.sunrisesunset.io/json?lat=" +
+          city.lat +
+          "&lng=" +
+          city.lng +
+          "&date=" +
+          date
       )
       .then((response) => {
         // console.log(response.data.results);
         setResults(response.data.results);
       });
+  };
+
+  const handleDateChange = (event) => {
+    setDate(event.target.value);
   };
 
   return (
@@ -78,8 +94,17 @@ function App() {
             showResult ? "form-container-hidden" : ""
           }`}
         >
-          <h2>Select your location</h2>
+          <h2>Select your location and date</h2>
           <form onSubmit={handleSubmit}>
+            <div className="form-control">
+              <label htmlFor="date">Date</label>
+              <input
+                type="date"
+                id="date"
+                onChange={handleDateChange}
+                defaultValue={dateToday}
+              />
+            </div>
             <div className="form-control">
               <label htmlFor="country">Country</label>
               <select id="country" onChange={handleCountryChange}>
@@ -135,6 +160,22 @@ function App() {
           <div className="no-city">No city selected</div>
         )}
       </div>
+      <footer>
+        <p>
+          Made with React by{" "}
+          <span>
+            <a href="" target="_blank">
+              Lucas Ferreira
+            </a>
+          </span>
+        </p>
+        <p>
+          API by{" "}
+          <span>
+            <a href="https://sunrisesunset.io/api/">SunireseSunset</a>
+          </span>
+        </p>
+      </footer>
     </div>
   );
 }

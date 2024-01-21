@@ -2,10 +2,9 @@
   text-align: center;
   width: 50%;
   height: 100%;
-  overflow: hidden;
   padding: 1.75rem;
   color: #4d4d4d;
-  background: rgba(255, 255, 255, 0.37);
+  background: rgba(255, 255, 255, 0.495);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5.3px);
@@ -67,4 +66,51 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #ffff;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+  color: #ffff;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .result-card {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .carousel-div {
+    height: 100%;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .carousel-div img {
+    width: 100% !important;
+    max-width: 220px !important;
+    height: 100%;
+  }
+
+  .carousel-div h2 {
+    font-size: 2rem;
+  }
+
+  .carousel-div p {
+    font-size: 1.25rem;
+  }
+
+  footer {
+    font-size: 1rem;
+  }
 }
