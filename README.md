@@ -1,6 +1,6 @@
 # SunSync App
 
-![SunSync Logo](./src/assets/sun-sync-logo.png)
+![SunSync Logo](./public/favicon.ico)
 
 ## Deployed Version
 
