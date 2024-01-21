@@ -1,6 +1,10 @@
 # SunSync App
 
-![SunSync Logo](./public/favicon.ico)
+![SunSync Logo](./src/assets/sun-sync-logo.png)
+
+## Deployed Version
+
+The app is deployed and can be accessed at [SunSync App](https://lcsferreira.github.io/sunsync-app/).
 
 ## Overview
 
@@ -46,7 +50,6 @@ SunSync is a React-based web application that provides information about sunrise
 ## Credits
 
 - **API:** [SunriseSunset](https://sunrisesunset.io/api/)
-- **ICONS:** [SVGRepo](https://www.svgrepo.com/collection/weather-forecast-3/)
 
 ## Acknowledgments
 
