@@ -164,7 +164,11 @@ function App() {
         <p>
           Made with React by{" "}
           <span>
-            <a href="" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/ls-oferreira/"
+              target="_blank"
+              rel="noreferrer"
+            >
               Lucas Ferreira
             </a>
           </span>
@@ -172,7 +176,13 @@ function App() {
         <p>
           API by{" "}
           <span>
-            <a href="https://sunrisesunset.io/api/">SunireseSunset</a>
+            <a
+              href="https://sunrisesunset.io/api/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              SunireseSunset
+            </a>
           </span>
         </p>
       </footer>
