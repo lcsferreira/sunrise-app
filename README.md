@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# SunSync App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![SunSync Logo](./src/assets/sun-sync-logo.png)
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+SunSync is a React-based web application that provides information about sunrise, sunset, and other relevant details based on the user's selected location and date. The app utilizes the SunriseSunset API to fetch accurate sunrise and sunset data. Users can choose a specific date, country, state, and city to get personalized information about the sun's position and daylight duration.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Location Selection**: Users can choose their location by selecting a country, state, and city from dropdown menus.
+- **Date Selection**: Users can pick a specific date to get sunrise and sunset information for that day.
+- **Dynamic Backgrounds**: The app dynamically changes the background image based on the time of day (sunrise, midday, sunset).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- **React**: The app is built using the React library for a dynamic and responsive user interface.
+- **axios**: Axios is used for making HTTP requests to the SunriseSunset API.
+- **react-responsive-carousel**: The carousel library is used to display information about different times of the day in a visually appealing manner.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Structure
 
-### `npm run build`
+- **App.js**: The main component that handles the user interface, form submissions, and API requests.
+- **ResultCard.js**: A separate component responsible for displaying the results in a carousel format.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## How to Run
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository: `git clone https://github.com/username/SunSync.git`
+2. Install dependencies: `npm install`
+3. Run the app: `npm start`
+4. Open the app in a web browser: `http://localhost:3000`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+1. Select a date.
+2. Choose your country, state, and city.
+3. Click the "Submit" button to retrieve sunrise and sunset information.
+4. View the results in a visually appealing carousel format.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Author
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Lucas Ferreira**
+  - LinkedIn: [Lucas Ferreira LinkedIn](https://www.linkedin.com/in/ls-oferreira/)
+  - GitHub: [Lucas Ferreira GitHub](https://github.com/ls-oferreira)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Credits
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **API:** [SunriseSunset](https://sunrisesunset.io/api/)
 
-## Learn More
+## Acknowledgments
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Special thanks to the SunriseSunset API for providing accurate and reliable sunrise and sunset data.
