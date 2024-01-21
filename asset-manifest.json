@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/sunsync-app/static/css/main.23be62c8.css",
+    "main.js": "/sunsync-app/static/js/main.d00a5423.js",
+    "static/js/787.a8da3170.chunk.js": "/sunsync-app/static/js/787.a8da3170.chunk.js",
+    "static/media/sunset-bg.jpg": "/sunsync-app/static/media/sunset-bg.f1f18f2f433d8b5553d4.jpg",
+    "static/media/sunrise-bg.jpg": "/sunsync-app/static/media/sunrise-bg.14cacd8ce41e6ae47d90.jpg",
+    "static/media/day-bg.jpg": "/sunsync-app/static/media/day-bg.665bb220be813017622b.jpg",
+    "static/media/sunset.svg": "/sunsync-app/static/media/sunset.3af376e8abc25f8f5f576e3df0229675.svg",
+    "static/media/sunrise.svg": "/sunsync-app/static/media/sunrise.091aa58b11ebf1395404d1fc7df6cd8a.svg",
+    "static/media/day.svg": "/sunsync-app/static/media/day.a52772ba4b62a7c492b991368a25c48c.svg",
+    "index.html": "/sunsync-app/index.html",
+    "main.23be62c8.css.map": "/sunsync-app/static/css/main.23be62c8.css.map",
+    "main.d00a5423.js.map": "/sunsync-app/static/js/main.d00a5423.js.map",
+    "787.a8da3170.chunk.js.map": "/sunsync-app/static/js/787.a8da3170.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.23be62c8.css",
+    "static/js/main.d00a5423.js"
+  ]
+}
