@@ -51,6 +51,7 @@ SunSync is a React-based web application that provides information about sunrise
 
 - **API:** [SunriseSunset](https://sunrisesunset.io/api/)
 - **ICONS:** [SVGRepo](https://www.svgrepo.com/collection/weather-forecast-3/)
+- **IMAGES:** [Unsplash](https://unsplash.com/pt-br)
 
 ## Acknowledgments
 
