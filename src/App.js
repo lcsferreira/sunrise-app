@@ -57,7 +57,7 @@ function App() {
     setCitySelected(null);
     setStates([]);
     setCities([]);
-    setDate(null);
+    setDate(dateToday);
     //select the first option
     document.getElementById("country").selectedIndex = 0;
   };
